@@ -45,7 +45,12 @@ into the Infrastructure folder, and run the following command:
 docker-compose up -d
 ```
 
-This will bring up MySql, Adminer, Elasticsearch, and Kibana.
+This will bring up MySql, Adminer, Elasticsearch, and Kibana. Please note
+that I've volumed the data from MySql and Elasticsearch to the Infrastructure
+folder. So when you start the services up, you'll notice an elasticsearchData
+and a mySqlData folder appear in the Infrastructure folder. To clear the data
+for subsequent runs of the docker-compose, simply delete these volume folders
+prior to running docker-compose up.
 
 ### Run the Application docker-compose
 
